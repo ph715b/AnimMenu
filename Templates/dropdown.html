@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"> 
     <link rel="stylesheet" href="styles.css">
     <script>
-        function toggleMenu(){
-            let menu = document.getElementById("menu");
-            menu.classList.toggle("active");
+        function toggleMenu() {
+            let menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+
+            let menuItems = menu.getElementsByTagName('li');
+            for (let item of menuItems) {
+                item.classList.toggle('clickable');
+            }
         }
     </script>
 </head>
